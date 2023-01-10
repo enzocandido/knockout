@@ -1,8 +1,10 @@
-function viewModel(){
+function viewModel() {
    var self = this;
 
    self.firstName = ko.observable("").extend({
-      required: true,
+      required: {
+         message: "Esse campo é obrigatório."
+      },
       minLength: 2,
       // validation: {
       //    message: "O nome não pode ser menor que 2 caracteres.",
@@ -14,15 +16,19 @@ function viewModel(){
    });
 
    self.emailAddress = ko.observable("").extend({
-      required: true,
+      required: {
+         message: "Esse campo é obrigatório."
+      },
       email: {
          message: "Insira um endereço de e-mail válido."
       }
    })
 
-   self.handleSubmit = function(){
+   self.accounts = ko.observableArray([]);
+
+   self.handleSubmit = function () {
       var errors = ko.validation.group(self)
-      if(errors().length > 0){
+      if (errors().length > 0) {
          console.log('Erro!')
          errors.showAllMessages();
          return;
@@ -32,13 +38,14 @@ function viewModel(){
          emailAddress: self.emailAddress(),
          subscriptionType: self.subscriptionType()
       }
-      console.log(payload)
+      self.accounts.push(payload);
       self.hasBeenSubmitted(true);
    }
 
    self.subscriptionType = ko.observable("standard");
 
    self.hasBeenSubmitted = ko.observable(false);
+
 }
 
 vm = new viewModel();

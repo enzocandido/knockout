@@ -5,6 +5,7 @@
 
 * {
    box-sizing:border-box;
+   margin: 0;
 }
 
 html, body {
@@ -19,12 +20,19 @@ body {
 }
 h2, p { margin: 0; }
 
+.header-section{
+   text-align: center;
+   margin: 0;
+}
+
 .card {
    background: #FFFFFF;
    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
    border-radius: var(--border-radius);
    max-width: 500px;
-   margin: 0 auto;
+   margin: 24px auto;
+   display: flex;
+   flex-direction: column;
 }
 .card header {
    padding: 1em;
@@ -48,6 +56,27 @@ h2, p { margin: 0; }
    margin-bottom:2em;
 }
 
+.card-submitted{
+   background-color: #4BB543;
+   display: flex;
+   justify-content: center;
+   height: 64px;
+   align-items: center;
+   font-weight: 700;
+}
+
+.card-created-accounts {
+   padding: 16px 0;
+   display: flex;
+   justify-content: center;
+}
+
+.card-created-accounts li{
+   margin: 16px 0;
+   list-style: none;
+   text-align: center;
+   height: 30px;
+}
 
 input[type="submit"] {
    margin-top: 1em;

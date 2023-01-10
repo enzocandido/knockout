@@ -12,25 +12,30 @@
 </head>
 
 <body>
+    <div class="header-section">
+        <h2>CONTAS</h2>
+    </div>
     <div id="knockout-app" class="card">
         <header>
             EMPRESA DOG
         </header>
-        <div class="card-section" data-bind="visible: hasBeenSubmitted">
+        <!-- ko if: hasBeenSubmitted-->
+        <div class="card-submitted">
             <p>Formulário enviado com sucesso!</p>
         </div>    
+        <!-- /ko -->
         <div class="card-section">
             <h2>Crie uma conta</h2>
-            <p>Preencha o formulário abaixo para ter todos os benefícios da empresa dog.</p>
+            <p>Preencha o formulário abaixo para ter todos os benefícios da empresa.</p>
 
             <form data-bind="submit: handleSubmit">
                 <div class="field">
                     <label for="first-name">Primeiro Nome</label>
-                    <input data-bind="value: firstName" id="first-name" type="text" />
+                    <input data-bind="value: firstName, css: { error: firstName.error() && firstName.isModified() }" id="first-name" type="text" />
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input data-bind="value: emailAddress" placeholder="seuemail@email.com" id="email" type="text">
+                    <input data-bind="value: emailAddress,  css: { error: emailAddress.error() && emailAddress.isModified() }" placeholder="seuemail@email.com" id="email" type="text">
                 </div>
                 <div class="field">
                     <label for="subscription">Assinatura</label>
@@ -53,6 +58,23 @@
         <footer>
             Tenha um bom dia!
         </footer>
+    </div>
+    <div class="card">
+        <div class="card-accounts">
+            <header>
+                Contas Criadas
+            </header>
+            <div class="card-created-accounts">
+                <ul data-bind="foreach: accounts">
+                    <div class="account-data">
+                        <li>
+                            <span data-bind="text: $data.firstName"></span>
+                            <span data-bind="text: $data.emailAddress"></span>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>
