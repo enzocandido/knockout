@@ -15,7 +15,9 @@ function viewModel(){
 
    self.emailAddress = ko.observable("").extend({
       required: true,
-      email: true
+      email: {
+         message: "Insira um endereço de e-mail válido."
+      }
    })
 
    self.handleSubmit = function(){
