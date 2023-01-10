@@ -20,17 +20,12 @@ body {
 }
 h2, p { margin: 0; }
 
-.header-section{
-   text-align: center;
-   margin: 0;
-}
-
 .card {
    background: #FFFFFF;
    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
    border-radius: var(--border-radius);
    max-width: 500px;
-   margin: 24px auto;
+   margin: 0 auto 24px auto;
    display: flex;
    flex-direction: column;
 }
