@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type='text/javascript' src='knockout-3.5.1.js'></script>
+    <script type='text/javascript' src='knockout.validation.min.js'></script>
+    <title>Inventário</title>
+</head>
+
+<body>
+    <div id="knockout-app" class="card">
+        <header>
+            EMPRESA DOG
+        </header>
+        <div class="card-section" data-bind="visible: hasBeenSubmitted">
+            <p>Formulário enviado com sucesso!</p>
+        </div>    
+        <div class="card-section">
+            <h2>Crie uma conta</h2>
+            <p>Preencha o formulário abaixo para ter todos os benefícios da empresa dog.</p>
+
+            <form data-bind="submit: handleSubmit">
+                <div class="field">
+                    <label for="first-name">Primeiro Nome</label>
+                    <input data-bind="value: firstName" id="first-name" type="text" />
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input data-bind="value: emailAddress" placeholder="seuemail@email.com" id="email" type="text">
+                </div>
+                <div class="field">
+                    <label for="subscription">Assinatura</label>
+                    <div class="select-container">
+                        <select id="subscription" data-bind="value: subscriptionType">
+                            <option value="standard">Padrão</option>
+                            <option value="pro">Profissional</option>
+                            <option value="superPro">Diamante</option>
+                        </select>
+                        <svg class="select_arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" width="30"
+                            viewBox="0 0 768 768">
+                            <path fill="#222" d="M223.5 319.5h321l-160.5 160.5z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <input type="submit" value="Continuar">
+            </form>
+
+        </div>
+        <footer>
+            Tenha um bom dia!
+        </footer>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
