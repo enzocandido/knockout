@@ -8,8 +8,7 @@ function viewModel() {
       { icon: "icon-rabbit", text: "Coelho" },
    ]
 
-   self.inventory = ko.observableArray([
-   ]);
+   self.inventory = ko.observableArray([]);
 
    self.addItem = function () {
       var index = Math.floor(Math.random() * iconTypes.length);

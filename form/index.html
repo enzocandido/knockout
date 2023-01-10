@@ -19,7 +19,7 @@
         <!-- ko if: hasBeenSubmitted-->
         <div class="card-submitted">
             <p>Formulário enviado com sucesso!</p>
-        </div>    
+        </div>
         <!-- /ko -->
         <div class="card-section">
             <h2>Crie uma conta</h2>
@@ -28,11 +28,14 @@
             <form data-bind="submit: handleSubmit">
                 <div class="field">
                     <label for="first-name">Primeiro Nome</label>
-                    <input data-bind="value: firstName, css: { error: firstName.error() && firstName.isModified() }" id="first-name" type="text" />
+                    <input data-bind="value: firstName, css: { error: firstName.error() && firstName.isModified() }"
+                        id="first-name" type="text" />
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input data-bind="value: emailAddress,  css: { error: emailAddress.error() && emailAddress.isModified() }" placeholder="seuemail@email.com" id="email" type="text">
+                    <input
+                        data-bind="value: emailAddress,  css: { error: emailAddress.error() && emailAddress.isModified() }"
+                        placeholder="seuemail@email.com" id="email" type="text">
                 </div>
                 <div class="field">
                     <label for="subscription">Assinatura</label>

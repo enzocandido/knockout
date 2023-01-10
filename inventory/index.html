@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,15 @@
     <script type='text/javascript' src='knockout-3.5.1.js'></script>
     <title>Inventário</title>
 </head>
+
 <body>
     <div id="knockout-app" class="card">
         <header>
             EMPRESA DOG
         </header>
         <div class="card-section">
-           <h2>Inventário de Brinquedos</h2>
-           <p>Aqui estão alguns dos seus brinquedos guardados.</p>
+            <h2>Inventário de Brinquedos</h2>
+            <p>Aqui estão alguns dos seus brinquedos guardados.</p>
             <button data-bind="click: addItem, enable: inventory().length < 4">+ Adicionar brinquedo</button>
             <p class="no-items" data-bind="visible: inventory().length == 0">Você não tem itens no inventário.</p>
             <ul class="counter-ui-container" data-bind="foreach: inventory">
@@ -38,4 +40,5 @@
     </div>
     <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

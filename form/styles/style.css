@@ -4,21 +4,26 @@
 }
 
 * {
-   box-sizing:border-box;
+   box-sizing: border-box;
    margin: 0;
 }
 
-html, body {
+html,
+body {
    height: 100%;
    font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
    color: #222;
-   background:#b6edfd;
+   background: #b6edfd;
    padding-top: 4em;
 }
-h2, p { margin: 0; }
+
+h2,
+p {
+   margin: 0;
+}
 
 .card {
    background: #FFFFFF;
@@ -29,6 +34,7 @@ h2, p { margin: 0; }
    display: flex;
    flex-direction: column;
 }
+
 .card header {
    padding: 1em;
    text-align: center;
@@ -42,16 +48,17 @@ h2, p { margin: 0; }
 }
 
 .card-section h2 {
-   font-weight:bold;
+   font-weight: bold;
    margin-bottom: 0.2em;
 }
+
 .card-section p {
-   font-weight:normal;
+   font-weight: normal;
    color: var(--paragraph-color);
-   margin-bottom:2em;
+   margin-bottom: 2em;
 }
 
-.card-submitted{
+.card-submitted {
    background-color: #4BB543;
    display: flex;
    justify-content: center;
@@ -66,7 +73,7 @@ h2, p { margin: 0; }
    justify-content: center;
 }
 
-.card-created-accounts li{
+.card-created-accounts li {
    margin: 16px 0;
    list-style: none;
    text-align: center;
@@ -84,14 +91,16 @@ input[type="submit"] {
    background: #64CDDB;
    font-family: inherit;
    outline: 0;
-   border:0;
+   border: 0;
    color: #fff;
-   font-weight:bold;
+   font-weight: bold;
    border-bottom: 4px solid #38BED3;
 }
+
 input[type="submit"]:focus {
    outline: #39A7B8 auto 1px;
 }
+
 input[type="submit"][disabled] {
    border: 1px solid #ddd;
    cursor: inherit;
@@ -103,6 +112,7 @@ label {
    color: var(--paragraph-color);
    margin-bottom: 0.3em;
 }
+
 input[type="text"] {
    display: block;
    height: 40px;
@@ -113,9 +123,11 @@ input[type="text"] {
    padding-left: 0.5em;
    font-family: inherit;
 }
+
 .field {
    margin-bottom: 1em;
 }
+
 select {
    height: 40px;
    padding-left: 0.5em;
@@ -126,24 +138,28 @@ select {
    font-family: inherit;
    appearance: none;
 }
+
 .select-container {
    position: relative;
-   display:inline-block;
+   display: inline-block;
 }
+
 .select_arrow {
    position: absolute;
-   right:0.3em;
-   top:0.3em;
+   right: 0.3em;
+   top: 0.3em;
 }
+
 ::placeholder {
    color: #bbb;
 }
 
 footer {
    color: #999;
-   text-align:center;
+   text-align: center;
    padding: 1em 1em 1em;
 }
+
 footer span {
    font-size: 0.8em;
 }
@@ -153,6 +169,7 @@ footer span {
    font-size: 0.8em;
    margin-top: 0.2em;
 }
+
 input.error {
    border: 1px solid red;
 }
